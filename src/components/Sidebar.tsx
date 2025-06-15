@@ -56,10 +56,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           {/* Header */}
           <div className="flex h-20 items-center justify-between px-6 border-b border-gray-100">
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg flex items-center justify-center">
-                <Building2 className="h-5 w-5 text-white" />
-              </div>
-              <span className="ml-3 text-xl font-bold text-gray-900">PropManager</span>
+              <img 
+                src="https://compraymudate.com/wp-content/uploads/2023/11/logo-compra-y-mudate-1.png" 
+                alt="Compra y Múdate" 
+                className="h-10 w-auto"
+              />
             </div>
             <button
               onClick={onClose}
@@ -96,14 +97,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   className={`
                     group flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200
                     ${isActive(item.href)
-                      ? 'bg-gradient-to-r from-pink-50 to-red-50 text-pink-600 shadow-sm'
+                      ? 'bg-gradient-to-r from-orange-50 to-red-50 text-orange-600 shadow-sm'
                       : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
                     }
                   `}
                 >
                   <Icon className={`
                     mr-3 h-5 w-5 flex-shrink-0 transition-colors
-                    ${isActive(item.href) ? 'text-pink-500' : 'text-gray-400 group-hover:text-gray-500'}
+                    ${isActive(item.href) ? 'text-orange-500' : 'text-gray-400 group-hover:text-gray-500'}
                   `} />
                   {item.name}
                 </Link>

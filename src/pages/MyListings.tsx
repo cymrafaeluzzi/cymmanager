@@ -156,7 +156,7 @@ const MyListings: React.FC = () => {
         </div>
         <Link
           to="/create-listing"
-          className="mt-6 sm:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold rounded-2xl hover:from-pink-600 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+          className="mt-6 sm:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-2xl hover:from-orange-600 hover:to-red-600 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
         >
           <Plus className="w-5 h-5 mr-2" />
           {t('listings.createNew')}
@@ -175,7 +175,7 @@ const MyListings: React.FC = () => {
                 placeholder={t('listings.search')}
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-4 py-3 w-full sm:w-80 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors bg-gray-50 focus:bg-white"
+                className="pl-12 pr-4 py-3 w-full sm:w-80 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-gray-50 focus:bg-white"
               />
             </div>
 
@@ -183,7 +183,7 @@ const MyListings: React.FC = () => {
             <select
               value={filterType}
               onChange={(e) => setFilterType(e.target.value as any)}
-              className="px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 bg-gray-50 focus:bg-white transition-colors"
+              className="px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 bg-gray-50 focus:bg-white transition-colors"
             >
               <option value="all">{t('listings.filters.allTypes')}</option>
               <option value="sale">{t('listings.filters.sale')}</option>
@@ -194,7 +194,7 @@ const MyListings: React.FC = () => {
             <select
               value={filterStatus}
               onChange={(e) => setFilterStatus(e.target.value as any)}
-              className="px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-pink-500 focus:border-pink-500 bg-gray-50 focus:bg-white transition-colors"
+              className="px-4 py-3 border border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 bg-gray-50 focus:bg-white transition-colors"
             >
               <option value="all">{t('listings.filters.allStatus')}</option>
               <option value="active">{t('listings.status.active')}</option>
@@ -207,13 +207,13 @@ const MyListings: React.FC = () => {
           <div className="flex items-center space-x-2 bg-gray-100 rounded-xl p-1">
             <button
               onClick={() => setViewMode('grid')}
-              className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-pink-600 shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
+              className={`p-2 rounded-lg transition-colors ${viewMode === 'grid' ? 'bg-white text-orange-600 shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
             >
               <Grid3X3 className="h-5 w-5" />
             </button>
             <button
               onClick={() => setViewMode('list')}
-              className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-pink-600 shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
+              className={`p-2 rounded-lg transition-colors ${viewMode === 'list' ? 'bg-white text-orange-600 shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}
             >
               <List className="h-5 w-5" />
             </button>
@@ -294,7 +294,7 @@ const MyListings: React.FC = () => {
                     <div className="flex items-center space-x-1">
                       <Link
                         to={`/edit-listing/${listing.id}`}
-                        className="p-2 text-gray-400 hover:text-pink-600 transition-colors rounded-full hover:bg-pink-50"
+                        className="p-2 text-gray-400 hover:text-orange-600 transition-colors rounded-full hover:bg-orange-50"
                       >
                         <Edit3 className="h-4 w-4" />
                       </Link>
@@ -365,7 +365,7 @@ const MyListings: React.FC = () => {
                         <span className="text-xs text-gray-500">{listing.views} {t('listings.views')}</span>
                         <Link
                           to={`/edit-listing/${listing.id}`}
-                          className="p-2 text-gray-400 hover:text-pink-600 transition-colors rounded-full hover:bg-pink-50"
+                          className="p-2 text-gray-400 hover:text-orange-600 transition-colors rounded-full hover:bg-orange-50"
                         >
                           <Edit3 className="h-4 w-4" />
                         </Link>

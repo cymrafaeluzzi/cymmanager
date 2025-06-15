@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
               <input
                 type="text"
                 placeholder="Buscar propiedades..."
-                className="pl-10 pr-4 py-2 w-80 border border-gray-200 rounded-full focus:ring-2 focus:ring-pink-500 focus:border-pink-500 transition-colors bg-gray-50 focus:bg-white"
+                className="pl-10 pr-4 py-2 w-80 border border-gray-200 rounded-full focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors bg-gray-50 focus:bg-white"
               />
             </div>
           </div>
@@ -36,7 +36,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
         <div className="flex items-center space-x-4">
           <button className="p-2 text-gray-400 hover:text-gray-500 hover:bg-gray-100 rounded-full transition-colors relative">
             <Bell className="h-6 w-6" />
-            <span className="absolute top-1 right-1 w-2 h-2 bg-pink-500 rounded-full"></span>
+            <span className="absolute top-1 right-1 w-2 h-2 bg-orange-500 rounded-full"></span>
           </button>
           
           <div className="flex items-center">
