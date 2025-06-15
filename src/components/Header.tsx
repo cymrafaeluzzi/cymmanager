@@ -25,10 +25,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
         </div>
 
         <div className="flex items-center space-x-4">
-          <button className="p-2 text-gray-400 hover:text-gray-500 hover:bg-gray-100 rounded-full transition-colors relative">
-            <Bell className="h-6 w-6" />
-            <span className="absolute top-1 right-1 w-2 h-2 bg-orange-500 rounded-full"></span>
-          </button>
+          
           
           <div className="flex items-center">
             <img
