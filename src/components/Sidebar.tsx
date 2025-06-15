@@ -57,7 +57,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="flex h-20 items-center justify-between px-6 border-b border-gray-100">
             <div className="flex items-center">
               <img 
-                src="https://compraymudate.com/wp-content/uploads/2023/11/logo-compra-y-mudate-1.png" 
+                src="https://compraymudate.com/application/cym/views/themes/v2/images/logo-cym.svg" 
                 alt="Compra y Múdate" 
                 className="h-10 w-auto"
               />
