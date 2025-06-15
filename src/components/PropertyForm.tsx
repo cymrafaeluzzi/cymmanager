@@ -4,7 +4,6 @@ import { useLanguage } from '../context/LanguageContext';
 import ProgressIndicator from './ProgressIndicator';
 import Step1PropertyInfo from './Step1PropertyInfo';
 import Step2MediaUpload from './Step2MediaUpload';
-import LanguageSelector from './LanguageSelector';
 
 const PropertyForm: React.FC = () => {
   const { currentStep } = useForm();
@@ -13,10 +12,7 @@ const PropertyForm: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        {/* Language Selector */}
-        <div className="flex justify-end mb-6">
-          <LanguageSelector />
-        </div>
+       
 
         {/* Header */}
         <div className="text-center mb-8">
