@@ -28,11 +28,7 @@ const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
           
           
           <div className="flex items-center">
-            <img
-              className="h-10 w-10 rounded-full object-cover ring-2 ring-gray-100"
-              src={user?.avatar || 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2'}
-              alt={user?.name}
-            />
+               <LanguageSelector />
           </div>
         </div>
       </div>
