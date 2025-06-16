@@ -125,8 +125,8 @@ const Step2MediaUpload: React.FC = () => {
       {/* Upload Area */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <div className="text-center">
-          <div className="mx-auto w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
-            <Upload className="w-8 h-8 text-orange-600" />
+          <div className="mx-auto w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+            <Upload className="w-8 h-8 text-[#e24a37]" />
           </div>
           <h4 className="text-lg font-semibold text-gray-900 mb-2">
             {t('media.upload.title')}
@@ -137,7 +137,7 @@ const Step2MediaUpload: React.FC = () => {
           
           <button
             onClick={openDashboard}
-            className="inline-flex items-center px-6 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 focus:ring-4 focus:ring-orange-200 transition-all duration-200 mr-4"
+            className="inline-flex items-center px-6 py-3 bg-[#e24a37] text-white font-semibold rounded-lg hover:bg-red-700 focus:ring-4 focus:ring-red-200 transition-all duration-200 mr-4"
           >
             <Upload className="w-5 h-5 mr-2" />
             {t('media.choose')}
@@ -188,7 +188,7 @@ const Step2MediaUpload: React.FC = () => {
                     </div>
                   )}
                   {index === 0 && (
-                    <div className="absolute top-2 left-2 bg-orange-600 text-white px-2 py-1 rounded text-xs font-medium">
+                    <div className="absolute top-2 left-2 bg-[#e24a37] text-white px-2 py-1 rounded text-xs font-medium">
                       {t('media.main')}
                     </div>
                   )}

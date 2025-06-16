@@ -28,9 +28,13 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
   useEffect(() => {
     const initializeMap = async () => {
       try {
+        console.log('Starting Google Maps initialization...');
         await googleMapsLoader.load();
+        console.log('Google Maps loaded successfully');
 
         if (mapRef.current) {
+          console.log('Creating map with coordinates:', { lat, lng });
+          
           const map = new google.maps.Map(mapRef.current, {
             center: { lat, lng },
             zoom: 16,
@@ -53,7 +57,7 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
             icon: {
               url: 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(`
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="#dc2626" stroke="#ffffff" stroke-width="2"/>
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" fill="#e24a37" stroke="#ffffff" stroke-width="2"/>
                   <circle cx="12" cy="10" r="3" fill="#ffffff"/>
                 </svg>
               `),
@@ -65,12 +69,15 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
           marker.addListener('dragend', () => {
             const position = marker.getPosition();
             if (position) {
+              console.log('Marker dragged to:', position.lat(), position.lng());
               onLocationChange(position.lat(), position.lng());
             }
           });
 
           mapInstanceRef.current = map;
           markerRef.current = marker;
+          
+          console.log('Map initialized successfully');
         }
 
         setIsLoaded(true);
@@ -93,6 +100,7 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
   }, []);
 
   useEffect(() => {
+    console.log('Updating map position to:', { lat, lng });
     if (mapInstanceRef.current && markerRef.current && isLoaded && !error) {
       const newPosition = { lat, lng };
       markerRef.current.setPosition(newPosition);
@@ -103,7 +111,10 @@ const InteractiveMap: React.FC<InteractiveMapProps> = ({
   if (isLoading) {
     return (
       <div className="w-full h-64 bg-gray-100 rounded-lg flex items-center justify-center">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#e24a37] mx-auto mb-2"></div>
+          <p className="text-sm text-gray-600">Cargando mapa...</p>
+        </div>
       </div>
     );
   }

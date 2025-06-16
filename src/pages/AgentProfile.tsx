@@ -87,7 +87,7 @@ const AgentProfile: React.FC = () => {
                   className={`
                     flex items-center py-4 px-1 border-b-2 font-medium text-sm transition-colors
                     ${activeTab === tab.id
-                      ? 'border-orange-500 text-orange-600'
+                      ? 'border-[#e24a37] text-[#e24a37]'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
                     }
                   `}
@@ -112,7 +112,7 @@ const AgentProfile: React.FC = () => {
                     src={agentData.avatar || 'https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=2'}
                     alt={agentData.name}
                   />
-                  <button className="absolute bottom-0 right-0 bg-orange-600 text-white p-2 rounded-full hover:bg-orange-700 transition-colors">
+                  <button className="absolute bottom-0 right-0 bg-[#e24a37] text-white p-2 rounded-full hover:bg-red-700 transition-colors">
                     <Camera className="h-4 w-4" />
                   </button>
                 </div>
@@ -136,7 +136,7 @@ const AgentProfile: React.FC = () => {
                     type="text"
                     value={agentData.name}
                     onChange={(e) => handleAgentChange('name', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
                   />
                 </div>
                 
@@ -148,7 +148,7 @@ const AgentProfile: React.FC = () => {
                     type="email"
                     value={agentData.email}
                     onChange={(e) => handleAgentChange('email', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
                   />
                 </div>
                 
@@ -160,7 +160,7 @@ const AgentProfile: React.FC = () => {
                     type="tel"
                     value={agentData.phone}
                     onChange={(e) => handleAgentChange('phone', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
                   />
                 </div>
                 
@@ -172,7 +172,7 @@ const AgentProfile: React.FC = () => {
                     type="text"
                     value={agentData.experience}
                     onChange={(e) => handleAgentChange('experience', e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
                   />
                 </div>
               </div>
@@ -186,7 +186,7 @@ const AgentProfile: React.FC = () => {
                   value={agentData.bio}
                   onChange={(e) => handleAgentChange('bio', e.target.value)}
                   rows={4}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37] resize-none"
                 />
               </div>
 
@@ -199,7 +199,7 @@ const AgentProfile: React.FC = () => {
                   {agentData.specialties.map((specialty, index) => (
                     <span
                       key={index}
-                      className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-orange-100 text-orange-800"
+                      className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-red-100 text-[#e24a37]"
                     >
                       {specialty}
                     </span>
@@ -210,7 +210,7 @@ const AgentProfile: React.FC = () => {
               <div className="pt-4">
                 <button
                   onClick={handleSaveAgent}
-                  className="inline-flex items-center px-4 py-2 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors"
+                  className="inline-flex items-center px-4 py-2 bg-[#e24a37] text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
                 >
                   <Save className="w-4 h-4 mr-2" />
                   {t('profile.save')}
@@ -231,7 +231,7 @@ const AgentProfile: React.FC = () => {
                         src={companyData.logo || 'https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&dpr=2'}
                         alt={companyData.name}
                       />
-                      <button className="absolute bottom-0 right-0 bg-orange-600 text-white p-2 rounded-full hover:bg-orange-700 transition-colors">
+                      <button className="absolute bottom-0 right-0 bg-[#e24a37] text-white p-2 rounded-full hover:bg-red-700 transition-colors">
                         <Camera className="h-4 w-4" />
                       </button>
                     </div>
@@ -255,7 +255,7 @@ const AgentProfile: React.FC = () => {
                         type="text"
                         value={companyData.name}
                         onChange={(e) => handleCompanyChange('name', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
                       />
                     </div>
                     
@@ -267,7 +267,7 @@ const AgentProfile: React.FC = () => {
                         type="text"
                         value={companyData.license}
                         onChange={(e) => handleCompanyChange('license', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
                       />
                     </div>
                     
@@ -279,7 +279,7 @@ const AgentProfile: React.FC = () => {
                         type="tel"
                         value={companyData.phone}
                         onChange={(e) => handleCompanyChange('phone', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
                       />
                     </div>
                     
@@ -291,7 +291,7 @@ const AgentProfile: React.FC = () => {
                         type="email"
                         value={companyData.email}
                         onChange={(e) => handleCompanyChange('email', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
                       />
                     </div>
                     
@@ -303,7 +303,7 @@ const AgentProfile: React.FC = () => {
                         type="url"
                         value={companyData.website}
                         onChange={(e) => handleCompanyChange('website', e.target.value)}
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
                       />
                     </div>
                   </div>
@@ -317,7 +317,7 @@ const AgentProfile: React.FC = () => {
                       value={companyData.address}
                       onChange={(e) => handleCompanyChange('address', e.target.value)}
                       rows={2}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37] resize-none"
                     />
                   </div>
 
@@ -330,14 +330,14 @@ const AgentProfile: React.FC = () => {
                       value={companyData.description}
                       onChange={(e) => handleCompanyChange('description', e.target.value)}
                       rows={4}
-                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37] resize-none"
                     />
                   </div>
 
                   <div className="pt-4">
                     <button
                       onClick={handleSaveCompany}
-                      className="inline-flex items-center px-4 py-2 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 transition-colors"
+                      className="inline-flex items-center px-4 py-2 bg-[#e24a37] text-white font-semibold rounded-lg hover:bg-red-700 transition-colors"
                     >
                       <Save className="w-4 h-4 mr-2" />
                       {t('profile.save')}

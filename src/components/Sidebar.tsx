@@ -97,14 +97,14 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   className={`
                     group flex items-center px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200
                     ${isActive(item.href)
-                      ? 'bg-gradient-to-r from-orange-50 to-red-50 text-orange-600 shadow-sm'
+                      ? 'bg-gradient-to-r from-red-50 to-orange-50 text-[#e24a37] shadow-sm'
                       : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
                     }
                   `}
                 >
                   <Icon className={`
                     mr-3 h-5 w-5 flex-shrink-0 transition-colors
-                    ${isActive(item.href) ? 'text-orange-500' : 'text-gray-400 group-hover:text-gray-500'}
+                    ${isActive(item.href) ? 'text-[#e24a37]' : 'text-gray-400 group-hover:text-gray-500'}
                   `} />
                   {item.name}
                 </Link>

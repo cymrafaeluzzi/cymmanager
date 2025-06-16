@@ -12,7 +12,7 @@ const Dashboard: React.FC = () => {
     { name: t('dashboard.stats.totalListings'), value: '12', icon: Building2, color: 'from-blue-500 to-blue-600', change: '+2.5%' },
     { name: t('dashboard.stats.activeListings'), value: '8', icon: TrendingUp, color: 'from-green-500 to-green-600', change: '+12%' },
     { name: t('dashboard.stats.totalViews'), value: '1,234', icon: Eye, color: 'from-purple-500 to-purple-600', change: '+18%' },
-    { name: t('dashboard.stats.favorites'), value: '45', icon: Heart, color: 'from-orange-500 to-orange-600', change: '+7%' },
+    { name: t('dashboard.stats.favorites'), value: '45', icon: Heart, color: 'from-[#e24a37] to-red-600', change: '+7%' },
   ];
 
   const recentActivity = [
@@ -52,7 +52,7 @@ const Dashboard: React.FC = () => {
       description: 'Publica una nueva propiedad',
       href: '/create-listing',
       icon: Plus,
-      color: 'from-orange-500 to-red-500'
+      color: 'from-[#e24a37] to-red-500'
     },
     {
       title: t('dashboard.actions.viewListings'),
@@ -66,14 +66,14 @@ const Dashboard: React.FC = () => {
       description: 'Actualiza tu información',
       href: '/agent-profile',
       icon: Eye,
-      color: 'from-purple-500 to-orange-500'
+      color: 'from-purple-500 to-[#e24a37]'
     }
   ];
 
   return (
     <div className="space-y-8">
       {/* Welcome Section */}
-      <div className="relative overflow-hidden bg-gradient-to-r from-orange-500 via-red-500 to-orange-600 rounded-3xl shadow-xl">
+      <div className="relative overflow-hidden bg-gradient-to-r from-[#e24a37] via-red-500 to-[#e24a37] rounded-3xl shadow-xl">
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="relative px-8 py-12">
           <div className="flex items-center justify-between">
@@ -81,13 +81,13 @@ const Dashboard: React.FC = () => {
               <h1 className="text-3xl font-bold text-white mb-2">
                 {t('dashboard.welcome')}, {user?.name}! 👋
               </h1>
-              <p className="text-orange-100 text-lg max-w-2xl">
+              <p className="text-red-100 text-lg max-w-2xl">
                 {t('dashboard.subtitle')}
               </p>
             </div>
             <Link
               to="/create-listing"
-              className="hidden lg:inline-flex items-center px-6 py-3 bg-white text-orange-600 font-semibold rounded-2xl hover:bg-orange-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="hidden lg:inline-flex items-center px-6 py-3 bg-white text-[#e24a37] font-semibold rounded-2xl hover:bg-red-50 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               <Plus className="w-5 h-5 mr-2" />
               {t('dashboard.createListing')}
@@ -158,7 +158,7 @@ const Dashboard: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-xl font-bold text-gray-900">{t('dashboard.recentActivity')}</h3>
-              <button className="text-sm font-medium text-orange-600 hover:text-orange-700 transition-colors">
+              <button className="text-sm font-medium text-[#e24a37] hover:text-red-700 transition-colors">
                 Ver todo
               </button>
             </div>

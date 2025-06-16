@@ -57,7 +57,7 @@ const Step1PropertyInfo: React.FC = () => {
       {/* Listing Type & Co-broke */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
         <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-          <Home className="w-5 h-5 mr-2 text-orange-500" />
+          <Home className="w-5 h-5 mr-2 text-[#e24a37]" />
           {t('listing.title')}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -77,7 +77,7 @@ const Step1PropertyInfo: React.FC = () => {
                     value={option.value}
                     checked={formData.listingType === option.value}
                     onChange={(e) => handleInputChange('listingType', e.target.value)}
-                    className="w-4 h-4 text-orange-600 border-gray-300 focus:ring-orange-500"
+                    className="w-4 h-4 text-[#e24a37] border-gray-300 focus:ring-[#e24a37]"
                   />
                   <span className="ml-2 text-sm text-gray-900">{option.label}</span>
                 </label>
@@ -99,7 +99,7 @@ const Step1PropertyInfo: React.FC = () => {
                     name="cobrokeAvailable"
                     checked={formData.cobrokeAvailable === option.value}
                     onChange={() => handleInputChange('cobrokeAvailable', option.value)}
-                    className="w-4 h-4 text-orange-600 border-gray-300 focus:ring-orange-500"
+                    className="w-4 h-4 text-[#e24a37] border-gray-300 focus:ring-[#e24a37]"
                   />
                   <span className="ml-2 text-sm text-gray-900">{option.label}</span>
                 </label>
@@ -166,7 +166,7 @@ const Step1PropertyInfo: React.FC = () => {
                 value={formData.price}
                 onChange={(e) => handleInputChange('price', e.target.value)}
                 placeholder={t('property.price.placeholder')}
-                className="pl-10 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                className="pl-10 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
               />
             </div>
           </div>
@@ -177,7 +177,7 @@ const Step1PropertyInfo: React.FC = () => {
               <select
                 value={formData.rooms}
                 onChange={(e) => handleInputChange('rooms', e.target.value)}
-                className="pl-10 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 appearance-none"
+                className="pl-10 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37] appearance-none"
               >
                 {ROOM_OPTIONS.map(option => (
                   <option key={option} value={option}>{option}</option>
@@ -192,7 +192,7 @@ const Step1PropertyInfo: React.FC = () => {
               <select
                 value={formData.baths}
                 onChange={(e) => handleInputChange('baths', e.target.value)}
-                className="pl-10 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 appearance-none"
+                className="pl-10 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37] appearance-none"
               >
                 {BATH_OPTIONS.map(option => (
                   <option key={option} value={option}>{option}</option>
@@ -209,7 +209,7 @@ const Step1PropertyInfo: React.FC = () => {
                 value={formData.lotSize}
                 onChange={(e) => handleInputChange('lotSize', e.target.value)}
                 placeholder={t('property.lotSize.placeholder')}
-                className="pl-10 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                className="pl-10 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
               />
             </div>
           </div>
@@ -228,7 +228,7 @@ const Step1PropertyInfo: React.FC = () => {
           onChange={(e) => handleInputChange('specialMessage', e.target.value)}
           maxLength={40}
           placeholder={t('special.message.placeholder')}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
         />
         <div className="text-xs text-gray-500 mt-1">{formData.specialMessage.length}/40 {t('characters')}</div>
       </div>
@@ -243,7 +243,7 @@ const Step1PropertyInfo: React.FC = () => {
                 type="checkbox"
                 checked={formData.amenities.includes(originalAmenity)}
                 onChange={(e) => handleAmenityChange(originalAmenity, e.target.checked)}
-                className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
+                className="w-4 h-4 text-[#e24a37] border-gray-300 rounded focus:ring-[#e24a37]"
               />
               <span className="ml-2 text-sm text-gray-900">{translatedAmenity}</span>
             </label>
@@ -262,7 +262,7 @@ const Step1PropertyInfo: React.FC = () => {
           maxLength={800}
           rows={4}
           placeholder={t('description.placeholder')}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 resize-none"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37] resize-none"
         />
         <div className="text-xs text-gray-500 mt-1">{formData.description.length}/800 {t('characters')}</div>
       </div>
@@ -278,7 +278,7 @@ const Step1PropertyInfo: React.FC = () => {
           value={formData.youtubeUrl}
           onChange={(e) => handleInputChange('youtubeUrl', e.target.value)}
           placeholder={t('youtube.placeholder')}
-          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#e24a37] focus:border-[#e24a37]"
         />
         <YouTubePreview url={formData.youtubeUrl} />
       </div>
@@ -287,7 +287,7 @@ const Step1PropertyInfo: React.FC = () => {
       <div className="flex justify-end">
         <button
           onClick={handleNext}
-          className="px-8 py-3 bg-orange-600 text-white font-semibold rounded-lg hover:bg-orange-700 focus:ring-4 focus:ring-orange-200 transition-all duration-200 flex items-center"
+          className="px-8 py-3 bg-[#e24a37] text-white font-semibold rounded-lg hover:bg-red-700 focus:ring-4 focus:ring-red-200 transition-all duration-200 flex items-center"
         >
           {t('button.next')}
           <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
